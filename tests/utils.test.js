@@ -23,7 +23,7 @@ const {
   jest.mock('@solana/web3.js');
   jest.mock('@noble/ed25519');
   
-  describe('Your Test Suite', () => {
+  describe('Astralis backend testing!', () => {
     // Mock the necessary objects
     const mockKeyPair = {
       secretKey: Buffer.from('your-secret-key'),
