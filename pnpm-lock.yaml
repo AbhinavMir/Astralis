@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@bonfida/spl-name-service': ^1.0.4
   '@chakra-ui/react': ^2.7.1
   '@elusiv/sdk': ^0.1.16
   '@emotion/react': ^11.11.1
@@ -27,6 +28,7 @@ specifiers:
   web-vitals: ^2.1.4
 
 dependencies:
+  '@bonfida/spl-name-service': 1.0.4_@solana+web3.js@1.77.3
   '@chakra-ui/react': 2.7.1_s6nps4367gtuadzou5ritecy7a
   '@elusiv/sdk': 0.1.16
   '@emotion/react': 11.11.1_react@18.2.0
@@ -1579,6 +1581,30 @@ packages:
 
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+    dev: false
+
+  /@bonfida/spl-name-service/1.0.4_@solana+web3.js@1.77.3:
+    resolution: {integrity: sha512-+JQ/aTVEaWLc+0WT5Q9FQP42kAMgJoTymh9o2FCPMB1Z1D9NxY7/ZlVezMf6G6hX3PpPbTVg/97tksNsry2hVw==}
+    peerDependencies:
+      '@solana/web3.js': ^1.75.0
+    dependencies:
+      '@ethersproject/sha2': 5.7.0
+      '@pythnetwork/client': 2.19.0_@solana+web3.js@1.77.3
+      '@solana/buffer-layout': 4.0.1
+      '@solana/spl-token': 0.3.7_@solana+web3.js@1.77.3
+      '@solana/web3.js': 1.77.3
+      bech32-buffer: 0.2.1
+      bn.js: 5.2.1
+      borsh: 0.7.0
+      buffer: 6.0.3
+      ipaddr.js: 2.1.0
+      punycode: 2.3.0
+      tweetnacl: 1.0.3
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
     dev: false
 
   /@chakra-ui/accordion/2.2.0_ntbwnuo6ocm2ea4m35xkmjooye:
@@ -4136,6 +4162,23 @@ packages:
       - utf-8-validate
     dev: false
 
+  /@solana/spl-token/0.3.7_@solana+web3.js@1.77.3:
+    resolution: {integrity: sha512-bKGxWTtIw6VDdCBngjtsGlKGLSmiu/8ghSt/IOYJV24BsymRbgq7r12GToeetpxmPaZYLddKwAz7+EwprLfkfg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@solana/web3.js': ^1.47.4
+    dependencies:
+      '@solana/buffer-layout': 4.0.1
+      '@solana/buffer-layout-utils': 0.2.0
+      '@solana/web3.js': 1.77.3
+      buffer: 6.0.3
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+    dev: false
+
   /@solana/spl-token/0.3.8_@solana+web3.js@1.77.3:
     resolution: {integrity: sha512-ogwGDcunP9Lkj+9CODOWMiVJEdRtqHAtX2rWF62KxnnSWtMZtV9rDhTrZFshiyJmxDnRL/1nKE1yJHg4jjs3gg==}
     engines: {node: '>=16'}
@@ -5598,6 +5641,11 @@ packages:
 
   /batch/0.6.1:
     resolution: {integrity: sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw==}
+    dev: false
+
+  /bech32-buffer/0.2.1:
+    resolution: {integrity: sha512-fCG1TyZuCN48Sdw97p/IR39fvqpFlWDVpG7qnuU1Uc3+Xtc/0uqAp8U7bMW/bGuVF5CcNVIXwxQsWwUr6un6FQ==}
+    engines: {node: '>=8'}
     dev: false
 
   /bech32/1.1.4:

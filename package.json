@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bonfida/spl-name-service": "^1.0.4",
     "@chakra-ui/react": "^2.7.1",
     "@elusiv/sdk": "^0.1.16",
     "@emotion/react": "^11.11.1",
