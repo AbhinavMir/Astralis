@@ -1,14 +1,10 @@
 import {
-  airdropToken,
   Elusiv,
-  getMintAccount,
-  TokenType,
   SEED_MESSAGE
 } from "@elusiv/sdk";
 import {
   Keypair,
   Connection,
-  Cluster,
   PublicKey,
   clusterApiUrl,
 } from "@solana/web3.js";
@@ -21,7 +17,7 @@ import {
 const CLUSTER = "devnet";
 const DEVNET_RPC_URL = "https://devnet.solana.com";
 
-const generateKey = async (): Promise<Keypair> => {
+const generateKey = async () => {
   const keyPair = Keypair.generate();
   return keyPair;
 };
@@ -47,10 +43,10 @@ async function getParams() {
 }
 
 async function topup(
-  elusivInstance: Elusiv,
-  keyPair: Keypair,
-  amount: number,
-  tokenType: TokenType
+  elusivInstance,
+  keyPair,
+  amount,
+  tokenType
 ) {
   // Build our topup transaction
   const topupTx = await elusivInstance.buildTopUpTx(amount, tokenType);
@@ -61,10 +57,10 @@ async function topup(
 }
 
 async function send(
-  elusiv: Elusiv,
-  recipient: PublicKey,
-  amount: number,
-  tokenType: TokenType
+  elusiv,
+  recipient,
+  amount,
+  tokenType
 ) {
   // Build the send transaction
   const sendTx = await elusiv.buildSendTx(amount, recipient, tokenType);
@@ -72,7 +68,7 @@ async function send(
   return elusiv.sendElusivTx(sendTx);
 }
 
-async function onramp_fiat(amount: number, tokenType: TokenType) {
+async function onramp_fiat(amount, tokenType) {
   // waiting for reply from MoonPay, Transak etc.
   return null;
 }
@@ -112,3 +108,7 @@ async function resolve(connection, domainName) {
 // <-----------------------------------***TESTING**------------------------------------------->
 
 let connection = new Connection(clusterApiUrl("testnet"));
+const devnet_url = "AM8xzq88VPhuD3za7546V9m5y5WtuAhvKytkFpF2Xppm";
+const devnet = new PublicKey(devnet_url);
+// get balance of devnet
+connection.getBalance(devnet).then((balance) => console.log(balance));
